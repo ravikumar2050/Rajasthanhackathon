@@ -1,0 +1,61 @@
+{{#if errors}}
+    {{#each errors}}
+        <div class="alert alert-danger">{{msg}}</div>
+    {{/each}}
+{{/if}}
+
+<p class="question" id="txt">{{txt}}</p>
+<section class="dashboard-header section-padding">
+  <h1 style="margin-left:100px;">Query</h1>
+
+   <div class="container"style="border-style:ridge;">
+
+
+        <form method="post" action="/users/ulbquery">
+
+          <div class="row">
+              <div class="form-group col-md-6"style="margin:20px">
+                <label for="inputname">FROM</label><br>
+                <input type="text" class="form-control" name="username" placeholder="{{g.username}}"style="margin-top:5px;" readonly>
+              </div>
+            </div>
+
+           
+
+          <div class="row">
+
+            <div class="col-md-6">
+              <div class="form-group col-md-6"style="margin:10px;">
+                <label for="Username">Email</label><br>
+                <input type="text" class="form-control" name="email" placeholder="{{g.email}}"style="margin-top:5px;" readonly>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+             <div class="form-group col-md-6"style="margin:10px;">
+                <label for="inputPassword">Phone Number</label><br>
+                <input type="number" class="form-control" name="phone" placeholder="{{g.mobile_no}}"style="margin-top:5px; "readonly>
+             </div>
+           </div>
+         </div>
+
+  <div class="row">
+            <div class="form-group col-md-6"style="margin:20px;">
+                <label for="inputPassword2">Subject</label><br>
+                <input type="text" class="form-control" name="subject" placeholder="Subject"  style="margin-top:5px;">
+            </div>
+        </div>
+           <div class="row">
+            <div class="form-group col-md-6"style="margin:20px;">
+                <label for="inputPassword2">Message</label><br>
+               
+                <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" placeholder="Message" name="message" rows="3" style="margin-top:5px;"></textarea>
+            </div>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary"style="margin:20px;">Send Query</button>
+        <button type="reset" class="btn btn-primary">reset</button>
+    </form>
+
+</div>

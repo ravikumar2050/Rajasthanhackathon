@@ -1,0 +1,97 @@
+
+{{#if errors}}
+    {{#each errors}}
+        <div class="alert alert-danger">{{msg}}</div>
+    {{/each}}
+{{/if}}
+
+
+{{#if uop}}
+    {{#each uop}}
+        <div class="alert alert-danger">{{message}}</div>
+    {{/each}}
+{{/if}}
+
+
+
+
+
+
+
+<div class="container">
+    <form method="post" action="./register">
+        <div class="form-group col-md-6">
+            <label for="inputname">Name</label>
+            <input type="text" class="form-control" name="name" placeholder="Name">
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Email</label>
+                <input type="email" class="form-control" name="email" placeholder="Email">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="Username">Username</label>
+                <input type="text" class="form-control" name="username" placeholder="Username">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPassword">Password</label>
+                <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                 class="form-control" name="password" placeholder="Password">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPassword2">Confirm Password</label>
+                <input type="password" class="form-control" name="password2" placeholder="Password">
+            </div>
+        </div>
+
+
+        <div class="form-group col-md-6">
+            <label for="mobileno">Emp ID</label>
+            <input type="number" class="form-control" name="employee_id" placeholder="emp id">
+        </div>
+
+
+        <div class="form-group col-md-6">
+            <label for="mobile_no">Mobile No (+91-XXXXXXXXXX)</label>
+            <input type="tel" class="form-control" name="mobile_no" pattern="^\d{10}$" placeholder="Mobile Number" required="required">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="Department">Department</label>
+            <input type="text" class="form-control" name="department" placeholder="Department">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="Department">Designation</label>
+            <input type="text" class="form-control" name="designation" placeholder="Designation">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputState">Security Question</label>
+            <select name="security_ques" class="form-control">
+                <option selected>Choose...</option>
+                <option>What is Your Pet Name?</option>
+                <option>What is Girlfriend name?</option>
+            </select>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="Securityanswer">Security Answer</label>
+            <input type="text" class="form-control" name="security_ans" placeholder="Your Answer">
+        </div>
+
+        <br>
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="gridCheck" >
+                <label class="form-check-label" for="gridCheck" >
+                    I Agree To Terms And Conditions
+                </label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+    </form>
+
+
+
+
+
+
+</div>

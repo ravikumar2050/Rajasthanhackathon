@@ -1,0 +1,66 @@
+{{> _header}}
+<br>
+<br>
+<br>
+<br>
+ {{#if error_msg}}
+               <div class="col-md-12"style="height:1;">
+       <div class="container">
+         <div class="alert alert-danger alert-dismissible fade show">
+             <button type="button" class="close" data-dismiss="alert">&times;</button>
+             <strong>Info!</strong>{{error_msg}}
+        </div>
+       </div>
+      </div>
+          {{/if}}
+  {{#if error}}
+           <div class="col-md-12"style="height:1;">
+       <div class="container">
+         <div class="alert alert-danger alert-dismissible fade show">
+             <button type="button" class="close" data-dismiss="alert">&times;</button>
+             <strong>Info! </strong>{{error}}
+        </div>
+       </div>
+      </div>
+      {{/if}}
+
+
+{{#if success_msg}}
+               <div class="col-md-12"style="height:1;">
+       <div class="container">
+         <div class="alert alert-success alert-dismissible fade show">
+             <button type="button" class="close" data-dismiss="alert">&times;</button>
+             <strong>Info!</strong>{{success_msg}}
+               </div>
+       </div>
+      </div>
+      {{/if}}
+<div class="container">
+
+    <form method="post"  action="./login">
+        <div class="form-group">
+            <label for="username">Enter Username</label>
+            <input type="text" class="form-control" name="username" placeholder="Username">
+        </div>
+        <br><br>
+        <br>
+
+        <div class="form-group">
+            <label for="password">Enter Password</label>
+            <input type="password" class="form-control" name="password" placeholder="Password">
+        </div>
+        <br><br><br>
+        <button class="button" href="./dashboard" style="padding: 15px">Login</button>
+        
+        <a href="./register"  ><button type="button" class="btn btn-primary" style="padding: 15px">Signup</button> </a>
+       <br>
+        <a href="./forgotpassword">Forgot Password</a>
+    </form>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{{> _footer}}

@@ -1,0 +1,29 @@
+{{#if data}}
+{{#each data}}
+
+<div id="test">
+
+	  		<p class="question" id="question">{{question}}</p>
+
+	    	<ul>
+	    	<input class="answer" type="radio" name="q1" value="1">
+	        <label id="op1">{{op1}}</label>
+	    	<br>
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label id="op2">{{op2}}</label>
+	        <br>
+			
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label id="op3">{{op3}}</label>
+	        <br>
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label id="op4">{{op4}}</label>
+    		</ul>
+	  	</div>
+
+
+ <a href=""  ><button id ="next"type="button" class="btn btn-primary" style="padding: 15px" >Next</button> </a>
+{{/each}}
+{{/if}}
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+\
